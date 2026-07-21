@@ -1,0 +1,21 @@
+### Both services ###
+target/
+*.class
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### Maven ###
+.mvn/wrapper/maven-wrapper.jar
+
+### OS files ###
+.DS_Store
+Thumbs.db
+
+### Environment / secrets (important) ###
+*.env
+application-local.properties
