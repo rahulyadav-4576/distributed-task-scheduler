@@ -10,9 +10,15 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    private final SecretKey key = Keys.hmacShaKeyFor(
-            "this-is-a-very-long-secret-key-for-jwt-signing-min-256-bits".getBytes()
-    );
+    
+    @Value("${jwt.secret}")
+    private String secretString;
+
+    private SecretKey key;
+    @PostConstruct
+    public void init() {
+        this.key = Keys.hmacShaKeyFor(secretString.getBytes());
+    }
 
     private final long EXPIRATION_MS = 3600000;
 
