@@ -18,5 +18,5 @@ Thumbs.db
 
 ### Environment / secrets (important) ###
 *.env
-application.properties.example
+application.properties
 
